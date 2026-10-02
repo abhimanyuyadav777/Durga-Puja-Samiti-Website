@@ -1,0 +1,3364 @@
+
+body{
+    background-color: rgb(255 138 0);
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* ================================
+   NAVRATRI WELCOME POPUP
+================================ */
+
+.welcome-popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(35, 8, 2, 0.78);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 20px;
+    animation: popupBg 0.5s ease;
+}
+
+.popup-box {
+    width: min(420px, 100%);
+    padding: 30px 25px;
+    text-align: center;
+    background:
+        linear-gradient(145deg,
+            #fff8e7,
+            #fff0c7);
+
+    border: 3px solid #d89b19;
+    border-radius: 25px;
+    box-shadow:
+        0 0 25px rgba(255, 193, 7, 0.5),
+        0 20px 60px rgba(0, 0, 0, 0.5);
+
+    position: relative;
+    animation: popupOpen 0.7s cubic-bezier(.17, .67, .35, 1.3);
+}
+
+/* =========================================
+   WELCOME POPUP - PERFECT MOBILE FIX
+========================================= */
+
+@media (max-width: 520px) {
+
+    .welcome-popup {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100dvh;
+        min-height: 100dvh;
+        padding: 12px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .popup-box {
+        width: 100%;
+        max-width: 350px;
+        max-height: calc(100dvh - 24px);
+        margin: 12px auto;
+        box-sizing: border-box;
+        padding: 20px 16px;
+        border-radius: 20px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        
+    }
+
+    /* Diya / top icon */
+    .popup-box .diya {
+        font-size: 38px;
+        margin-bottom: 5px;
+    }
+
+    /* जय माता दी */
+    .popup-box h1 {
+        font-size: 27px;
+        line-height: 1.2;
+        margin: 5px 0;
+    }
+
+    /* Navratri heading */
+    .popup-box h2 {
+        font-size: 17px;
+        line-height: 1.4;
+        margin: 7px 0;
+    }
+
+    .popup-box .today-text {
+        font-size: 12px;
+        margin: 7px 0;
+    }
+
+    /* Mata image */
+    .popup-box img {
+        display: block;
+        width: 145px;
+        height: 145px;
+        max-width: 55vw;
+        max-height: 28vh;
+        margin: 8px auto;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    /* Mata name */
+    .popup-box h3 {
+        font-size: 19px;
+        margin: 8px 0 5px;
+        line-height: 1.3;
+    }
+
+    /* Message */
+    .popup-box #mataMessage {
+        font-size: 13px;
+        line-height: 1.5;
+        margin: 5px 0 12px;
+    }
+
+    /* दर्शन button */
+    .popup-box button {
+        display: block;
+        width: 100%;
+
+        padding: 10px 12px;
+
+        font-size: 13px;
+        line-height: 1.3;
+
+        border-radius: 25px;
+    }
+}
+
+/* Diya */
+
+.diya {
+    font-size: 48px;
+    margin-bottom: 5px;
+    animation: diyaGlow 1.5s infinite alternate;
+}
+
+
+
+/* Main heading */
+
+.popup-box h1 {
+    margin: 0;
+    font-size: 32px;
+    color: #9d160b;
+    font-weight: 800;
+}
+
+
+/* Greeting */
+
+.popup-box h2 {
+    margin: 12px 0 18px;
+    font-size: 22px;
+    color: #c46a00;
+}
+
+
+/* Day text */
+
+.today-text {
+    margin: 0 0 12px;
+    font-size: 16px;
+    color: #704214;
+    font-weight: 600;
+}
+
+
+/* Mata image */
+
+.popup-box img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #d89b19;
+    box-shadow:
+        0 0 0 6px rgba(216, 155, 25, 0.15),
+        0 8px 25px rgba(0, 0, 0, 0.25);
+
+    margin: 5px auto 15px;
+    display: block;
+}
+
+.namaste{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 0 6px rgba(216, 155, 25, 0.15), 0 8px 25px rgba(0, 0, 0, 0.25);
+    margin: 5px auto 15px;
+    display: block;
+}
+.namaste img{
+    width: 100px;
+    height: 100px;
+}
+
+/* Mata name */
+
+.popup-box h3 {
+    margin: 5px 0 10px;
+    font-size: 25px;
+    color: #9d160b;
+}
+
+
+/* Message */
+
+#mataMessage {
+    color: #63451d;
+    font-size: 15px;
+    margin-bottom: 22px;
+}
+
+
+/* Button */
+
+.popup-box button {
+    border: none;
+    outline: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    background: linear-gradient(135deg,
+            #a9150a,
+            #e58b08);
+
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow:
+        0 6px 15px rgba(157, 22, 11, 0.3);
+
+    transition: 0.3s ease;
+}
+
+.popup-box button:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow:
+        0 10px 22px rgba(157, 22, 11, 0.4);
+}
+
+
+/* Popup closing */
+
+.welcome-popup.hide {
+    animation: popupClose 0.4s ease forwards;
+}
+
+
+/* ================================
+   ANIMATIONS
+================================ */
+
+@keyframes popupOpen {
+
+    from {
+        opacity: 0;
+        transform: scale(0.7) translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+
+@keyframes popupClose {
+
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(0.2);
+        visibility: hidden;
+    }
+}
+
+
+@keyframes popupBg {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes diyaGlow {
+
+    from {
+        transform: scale(1);
+        filter: drop-shadow(0 0 5px #ffb300);
+    }
+
+    to {
+        transform: scale(1.08);
+        filter: drop-shadow(0 0 18px #ff9800);
+    }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 500px) {
+
+    .popup-box {
+        padding: 25px 18px;
+    }
+
+    .popup-box h1 {
+        font-size: 27px;
+    }
+
+    .popup-box h2 {
+        font-size: 19px;
+    }
+
+    /* .popup-box img {
+        width: 150px;
+        height: 150px;
+    } */
+
+    .popup-box h3 {
+        font-size: 22px;
+    }
+}
+
+/* =================================
+   NAVBAR
+================================= */
+
+.navbar {
+    width: 100%;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6%;
+    background: rgba(91, 12, 6, 0.97);
+    border-bottom: 2px solid #d89b19;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.logo {
+    color: #ffd66b;
+    font-size: 21px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 35px;
+}
+
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #ffd66b;
+}
+
+
+/* Underline animation */
+
+.navbar nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 2px;
+    background: #ffd66b;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover::after {
+    width: 100%;
+}
+
+
+/* =================================
+   HERO SECTION
+================================= */
+
+.hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 20px 40px;
+    box-sizing: border-box;
+    background:
+        linear-gradient(rgb(255 138 0), rgb(203 27 11 / 75%)),
+        url("https://png.pngtree.com/png-vector/20250301/ourmid/pngtree-beautiful-new-sherawali-maa-goddess-durga-mata-rani-navratri-with-trishul-png-image_15610504.png");
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* Hero content */
+
+.hero-content {
+    
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+    color: white;
+    animation: heroAppear 1s ease;
+}
+
+.hero-small {
+    color: #ffd66b;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: clamp(40px, 7vw, 75px);
+    color: #fff5d6;
+    text-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.hero h2 {
+    margin: 15px 0;
+    font-size: clamp(25px, 4vw, 42px);
+    color: #ffd05a;
+}
+
+.hero-description {
+    max-width: 650px;
+    margin: 20px auto 30px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #fff4dc;
+}
+
+
+/* =================================
+   HERO BUTTONS
+================================= */
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 30px;
+    background: linear-gradient(135deg,
+            #b51b0d,
+            #e9930b);
+
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow:
+        0 7px 20px rgba(0, 0, 0, 0.3);
+
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 12px 25px rgba(0, 0, 0, 0.4);
+}
+
+.outline-btn {
+    background: transparent;
+    border: 2px solid #ffd66b;
+    color: #ffd66b;
+}
+
+.outline-btn:hover {
+    background: #ffd66b;
+    color: #7b1208;
+}
+
+
+/* =================================
+   HERO ANIMATION
+================================= */
+
+@keyframes heroAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =================================
+   MOBILE NAVBAR
+================================= */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        height: auto;
+        padding: 6px 6px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+    .logo img{
+        width: 50px;
+        height: 50px;
+    }
+
+    .navbar nav {
+        gap: 20px;
+    }
+
+    .navbar nav a {
+        font-size: 14px;
+    }
+
+    .hero {
+        height: 70vh;
+        padding-top: 150px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+}
+
+.logointext{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+}
+.logointext img{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    width: 155px;
+}
+
+/* =================================
+   NAVDURGA SECTION
+================================= */
+
+.navdurga-section {
+    padding: 90px 6%;
+
+    background:
+        linear-gradient(180deg,
+            #fff9ed,
+            #fff1d2);
+
+    text-align: center;
+}
+
+
+/* Heading */
+
+.section-heading {
+    max-width: 700px;
+    margin: 70px 45px;
+}
+
+.section-heading p {
+    margin: 0 0 8px;
+    color: #c87900;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.section-heading h2 {
+    margin: 0 0 12px;
+    font-size: clamp(32px, 5vw, 48px);
+    color: #95170c;
+}
+
+.section-heading span {
+    color: #70502c;
+    font-size: 16px;
+}
+
+
+/* Grid */
+
+.navdurga-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* Card */
+
+.mata-card {
+    position: relative;
+    overflow: hidden;
+    background: white;
+    border-radius: 20px;
+    /* border: 2px solid #e3b54c; */
+    box-shadow:
+        0 8px 25px rgba(91, 36, 5, 0.12);
+
+    cursor: pointer;
+    transition: 0.35s ease;
+}
+
+.mata-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 35px rgba(91, 36, 5, 0.22);
+}
+
+
+/* Image */
+
+.mata-card img {
+    position: relative;
+    top: 15px;
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    display: block;
+    transition: 0.4s ease;
+}
+
+.mata-card:hover img {
+    transform: scale(1.06);
+}
+
+
+/* Day badge */
+
+.day-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 2;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: #a7190c;
+    color: white;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+
+/* Card information */
+
+.mata-info {
+    padding: 18px 10px 20px;
+}
+
+.mata-info h3 {
+    margin: 0;
+    color: #99170c;
+    font-size: 22px;
+}
+
+.mata-info p {
+    margin: 7px 0 0;
+    color: #8a642f;
+    font-size: 14px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    .navdurga-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 520px) {
+
+    .navdurga-section {
+        padding: 65px 18px;
+    }
+
+    .navdurga-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mata-card img {
+        height: 300px;
+    }
+}
+
+/* =================================
+   MATA DETAILS MODAL
+================================= */
+
+.mata-modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(40, 8, 2, 0.78);
+    backdrop-filter: blur(7px);
+    z-index: 9998;
+}
+
+.mata-modal.show {
+    display: flex;
+    animation: modalBg 0.3s ease;
+}
+
+.mata-modal-box {
+    position: relative;
+    width: min(450px, 100%);
+    padding: 30px 25px;
+    text-align: center;
+    background: #fff8e8;
+    border: 3px solid #d89b19;
+    border-radius: 25px;
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.45);
+
+    animation: modalOpen 0.4s ease;
+}
+
+.mata-modal-box img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #d89b19;
+    box-shadow:
+        0 0 25px rgba(216, 155, 25, 0.35);
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    background: #a7190c;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.modal-day {
+    margin-top: 18px;
+    color: #c87900;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.mata-modal-box h2 {
+    margin: 8px 0;
+    color: #99170c;
+    font-size: 28px;
+}
+
+#modalDescription {
+    color: #654a29;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.modal-blessing {
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 12px;
+    background: #fff0c7;
+    color: #8c3b08;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* Animation */
+
+@keyframes modalOpen {
+
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes modalBg {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* ================================
+   NAVDURGA MOBILE RESPONSIVE MODAL
+================================ */
+
+.mata-modal {
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.mata-modal-box {
+    width: min(450px, 100%);
+    max-height: 90vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 28px 22px;
+}
+
+.mata-modal-box img {
+    width: 200px;
+    height: 200px;
+    max-width: 70vw;
+    max-height: 35vh;
+    object-fit: cover;
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+
+    .mata-modal {
+        padding: 12px;
+        align-items: center;
+    }
+
+    .mata-modal-box {
+        width: 100%;
+        max-width: 360px;
+        max-height: 88vh;
+        padding: 25px 18px 20px;
+        border-width: 2px;
+        border-radius: 20px;
+    }
+
+    .mata-modal-box img {
+        width: 150px;
+        height: 150px;
+        max-width: 55vw;
+        max-height: 30vh;
+    }
+
+    .modal-close {
+        top: 8px;
+        right: 8px;
+        width: 34px;
+        height: 34px;
+        font-size: 22px;
+    }
+
+    .modal-day {
+        margin-top: 14px;
+        font-size: 12px;
+    }
+
+    .mata-modal-box h2 {
+        margin: 7px 0;
+        font-size: 23px;
+    }
+
+    #modalDescription {
+        font-size: 14px;
+        line-height: 1.6;
+        margin: 10px 0;
+    }
+
+    .modal-blessing {
+        margin-top: 15px;
+        padding: 10px;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+}
+
+/* Fixed navbar ke neeche section hide na ho */
+.navdurga-section {
+    scroll-margin-top: 90px;
+    padding-top: 110px;
+}
+
+/* Card ko badge ke liye proper positioning */
+.mata-card {
+    position: relative;
+}
+
+/* =================================
+   GALLERY SECTION
+================================= */
+
+.gallery-section {
+    padding: 90px 6%;
+
+    background: #fffaf0;
+
+    text-align: center;
+}
+
+.gallery-grid {
+    max-width: 1200px;
+
+    margin: 45px auto 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.gallery-item {
+    height: 260px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    border: 2px solid #e1b348;
+
+    background: #fff;
+
+    box-shadow:
+        0 8px 22px rgba(80, 30, 5, 0.12);
+
+    cursor: pointer;
+
+    transition: 0.35s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.45s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 15px 30px rgba(80, 30, 5, 0.2);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+
+/* Gallery mobile */
+
+@media (max-width: 800px) {
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 520px) {
+
+    .gallery-section {
+        padding: 65px 18px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item {
+        height: 280px;
+    }
+}
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact-section {
+    padding: 100px 6%;
+    background:
+        radial-gradient(circle at top left,
+        rgba(255, 205, 90, 0.16),
+        transparent 35%),
+        linear-gradient(135deg, #fff8e8, #fff1d2);
+}
+
+.contact-container {
+    max-width: 1100px;
+    margin: 50px auto 0;
+
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 28px;
+}
+
+
+/* LEFT CARD */
+
+.contact-info {
+    padding: 38px;
+    background: rgba(255, 255, 255, 0.9);
+
+    border: 1px solid #e3b54c;
+    border-radius: 24px;
+
+    box-shadow:
+        0 12px 35px rgba(91, 36, 5, 0.12);
+
+    transition: 0.3s ease;
+}
+
+.contact-info:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 18px 40px rgba(91, 36, 5, 0.17);
+}
+
+.contact-info h3 {
+    margin: 0 0 12px;
+
+    color: #95170c;
+    font-size: 27px;
+}
+
+.contact-intro {
+    color: #70502c;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+
+/* DETAILS */
+
+.contact-detail {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid #f0dfb5;
+}
+
+.contact-detail:last-child {
+    border-bottom: none;
+}
+
+.contact-icon-box {
+    min-width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #fff0c7;
+    border: 1px solid #e3b54c;
+
+    font-size: 21px;
+}
+
+.contact-detail strong {
+    color: #99170c;
+    font-size: 16px;
+}
+
+.contact-detail p {
+    margin: 4px 0 0;
+    color: #70502c;
+    font-size: 14px;
+}
+
+
+/* RIGHT CARD */
+
+.contact-message {
+    position: relative;
+    padding: 40px 30px;
+    border-radius: 24px;
+    background:
+        linear-gradient(145deg, #8e160b, #b92712);
+
+    border: 2px solid #d89b19;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow:
+        0 15px 40px rgba(91, 12, 6, 0.25);
+}
+
+.contact-message::before {
+    content: "✦";
+
+    position: absolute;
+    top: 15px;
+    left: 20px;
+
+    color: #ffd66b;
+    font-size: 25px;
+}
+
+.contact-message::after {
+    content: "✦";
+
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+
+    color: #ffd66b;
+    font-size: 25px;
+}
+
+.contact-decor {
+    font-size: 52px;
+    margin-bottom: 8px;
+}
+
+.contact-message h3 {
+    margin: 0 0 12px;
+
+    color: #ffd66b;
+    font-size: 32px;
+}
+
+.contact-message p {
+    max-width: 350px;
+
+    color: #fff0cf;
+    line-height: 1.8;
+
+    margin: 0;
+}
+
+
+/* BUTTONS */
+
+.contact-buttons {
+    display: flex;
+    gap: 12px;
+
+    margin-top: 25px;
+
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact-btn {
+    padding: 12px 22px;
+
+    border-radius: 30px;
+
+    background: #fff;
+    color: #99170c;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.contact-btn:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-btn {
+    background: #198754;
+    color: white;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 520px) {
+
+    .contact-section {
+        padding: 70px 18px;
+    }
+
+    .contact-info {
+        padding: 28px 20px;
+    }
+
+    .contact-message {
+        padding: 35px 20px;
+    }
+
+}
+
+/* =========================
+   GALLERY LIGHTBOX
+========================= */
+
+.gallery-lightbox {
+    position: fixed;
+    inset: 0;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    background: rgba(20, 5, 2, 0.92);
+    backdrop-filter: blur(8px);
+
+    z-index: 10000;
+}
+
+.gallery-lightbox.show {
+    display: flex;
+    animation: lightboxFade 0.3s ease;
+}
+
+.gallery-lightbox img {
+    max-width: 90%;
+    max-height: 85vh;
+
+    object-fit: contain;
+
+    border: 3px solid #e1b348;
+    border-radius: 15px;
+
+    box-shadow:
+        0 0 30px rgba(255, 193, 7, 0.35),
+        0 20px 60px rgba(0, 0, 0, 0.6);
+
+    animation: imageZoom 0.35s ease;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #a7190c;
+    color: white;
+
+    font-size: 30px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.lightbox-close:hover {
+    transform: rotate(90deg) scale(1.08);
+    background: #d63a18;
+}
+
+@keyframes lightboxFade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes imageZoom {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 520px) {
+
+    .gallery-lightbox {
+        padding: 15px;
+    }
+
+    .gallery-lightbox img {
+        max-width: 95%;
+        max-height: 80vh;
+    }
+
+    .lightbox-close {
+        top: 12px;
+        right: 15px;
+    }
+
+}
+
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 50px;
+    height: 50px;
+
+    border: 2px solid #e1b348;
+    border-radius: 50%;
+
+    background: rgba(91, 12, 6, 0.85);
+    color: #ffd66b;
+
+    font-size: 42px;
+    line-height: 35px;
+
+    cursor: pointer;
+
+    z-index: 2;
+
+    transition: 0.3s ease;
+}
+
+.lightbox-prev {
+    left: 25px;
+}
+
+.lightbox-next {
+    right: 25px;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background: #a7190c;
+    transform: translateY(-50%) scale(1.1);
+}
+@media (max-width: 600px) {
+
+    .lightbox-prev,
+    .lightbox-next {
+        width: 42px;
+        height: 42px;
+        font-size: 34px;
+    }
+
+    .lightbox-prev {
+        left: 10px;
+    }
+
+    .lightbox-next {
+        right: 10px;
+    }
+
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    width: 100%;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #5b0c06, #8f160b);
+    color: #fff;
+    text-align: center;
+    border-top: 2px solid #d89b19;
+    position: relative;
+    display: block;
+}
+
+.footer-content {
+    padding: 45px 20px 30px;
+}
+
+.footer-logo {
+    color: #ffd66b;
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.footer-content > p {
+    margin: 0 0 22px;
+    color: #ffe9b0;
+    font-size: 15px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffd66b;
+}
+
+.footer-bottom {
+    padding: 15px 20px;
+    border-top: 1px solid rgba(255, 214, 107, 0.25);
+    color: #f8dca0;
+    font-size: 13px;
+}
+
+
+/* =========================
+   FOOTER MOBILE
+========================= */
+
+@media (max-width: 520px) {
+
+    .footer-content {
+        padding: 35px 15px 25px;
+    }
+
+    .footer-logo {
+        font-size: 19px;
+        line-height: 1.5;
+    }
+
+    .footer-content > p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .footer-links {
+        gap: 15px;
+    }
+
+    .footer-links a {
+        font-size: 13px;
+    }
+
+    .footer-bottom {
+        padding: 13px 12px;
+        font-size: 11px;
+        line-height: 1.6;
+    }
+}
+
+/* =========================
+   ABOUT SAMITI SECTION
+========================= */
+
+.about-section {
+    padding: 90px 6%;
+    background: linear-gradient(
+        180deg,
+        #fffaf0,
+        #fff1d2
+    );
+}
+
+.about-container {
+    max-width: 1150px;
+    margin: 45px auto 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    align-items: stretch;
+}
+
+
+/* About Content */
+
+.about-content {
+    padding: 35px;
+
+    background: white;
+
+    border: 2px solid #e3b54c;
+    border-radius: 22px;
+
+    box-shadow:
+        0 10px 30px rgba(91, 36, 5, 0.12);
+}
+
+.about-content h3 {
+    margin: 0 0 18px;
+
+    color: #95170c;
+    font-size: 27px;
+}
+
+.about-content p {
+    color: #70502c;
+    line-height: 1.8;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+
+/* Highlight */
+
+.about-highlight {
+    margin-top: 25px;
+    padding: 15px 18px;
+
+    border-radius: 14px;
+
+    background: #fff3cf;
+    border-left: 4px solid #d89b19;
+
+    color: #95170c;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.about-highlight strong {
+    font-size: 19px;
+}
+
+.about-highlight span {
+    color: #79552a;
+    font-size: 13px;
+}
+
+
+/* Features */
+
+.about-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.about-feature {
+    padding: 25px 20px;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    border: 1px solid #e3b54c;
+    border-radius: 18px;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+
+    box-shadow:
+        0 7px 20px rgba(91, 36, 5, 0.08);
+
+    transition: 0.3s ease;
+}
+
+.about-feature:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 14px 28px rgba(91, 36, 5, 0.15);
+}
+
+.feature-icon {
+    min-width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #fff0c7;
+    border: 1px solid #e3b54c;
+
+    font-size: 21px;
+}
+
+.about-feature h4 {
+    margin: 2px 0 6px;
+
+    color: #99170c;
+    font-size: 18px;
+}
+
+.about-feature p {
+    margin: 0;
+
+    color: #765832;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 520px) {
+
+    .about-section {
+        padding: 65px 18px;
+    }
+
+    .about-content {
+        padding: 25px 20px;
+    }
+
+    .about-features {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* =========================
+   FESTIVAL EVENTS
+========================= */
+
+.events-section {
+    padding: 90px 6%;
+    background: #fffaf0;
+}
+
+.events-container {
+    max-width: 1150px;
+    margin: 45px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.event-card {
+    position: relative;
+
+    padding: 30px 25px;
+
+    background: white;
+
+    border: 2px solid #e3b54c;
+    border-radius: 20px;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 25px rgba(91, 36, 5, 0.10);
+
+    transition: 0.35s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 16px 32px rgba(91, 36, 5, 0.18);
+}
+
+.event-number {
+    position: absolute;
+
+    top: 12px;
+    right: 15px;
+
+    color: #d9a62e;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.event-icon {
+    width: 65px;
+    height: 65px;
+
+    margin: 5px auto 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #fff2ce;
+    border: 2px solid #e3b54c;
+
+    font-size: 30px;
+}
+
+.event-card h3 {
+    margin: 0 0 10px;
+
+    color: #99170c;
+    font-size: 21px;
+}
+
+.event-card p {
+    margin: 0;
+
+    color: #70502c;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+    .events-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 520px) {
+
+    .events-section {
+        padding: 65px 18px;
+    }
+
+    .events-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* =========================
+   HIGHLIGHTS SECTION
+========================= */
+
+.highlights-section {
+    padding: 90px 6%;
+    background: linear-gradient(135deg, #fff8e8, #ffefcf);
+    text-align: center;
+}
+
+.highlights-container {
+    max-width: 1150px;
+    margin: 45px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.highlight-card {
+    position: relative;
+    padding: 30px 20px;
+
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid #e3b54c;
+    border-radius: 22px;
+
+    box-shadow: 0 8px 25px rgba(91, 36, 5, 0.10);
+
+    transition: 0.35s ease;
+    overflow: hidden;
+}
+
+.highlight-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: linear-gradient(90deg, #a7190c, #e3a21b);
+}
+
+.highlight-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(91, 36, 5, 0.18);
+}
+
+.highlight-icon {
+    width: 70px;
+    height: 70px;
+
+    margin: 5px auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #fff2ce;
+    border: 2px solid #e3b54c;
+
+    font-size: 32px;
+
+    transition: 0.35s ease;
+}
+
+.highlight-card:hover .highlight-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.highlight-card h3 {
+    margin: 0 0 10px;
+
+    color: #99170c;
+    font-size: 20px;
+}
+
+.highlight-card p {
+    margin: 0;
+
+    color: #70502c;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* Tablet */
+@media (max-width: 900px) {
+
+    .highlights-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* Mobile */
+@media (max-width: 520px) {
+
+    .highlights-section {
+        padding: 65px 18px;
+    }
+
+    .highlights-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* =========================
+   MAA MESSAGE SECTION
+========================= */
+
+.maa-message-section {
+    padding: 90px 6%;
+    background: #fffaf0;
+}
+
+.maa-message-card {
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+    padding: 55px 40px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(circle at top left,
+        rgba(255, 214, 107, 0.18),
+        transparent 30%),
+        radial-gradient(circle at bottom right,
+        rgba(255, 193, 7, 0.15),
+        transparent 30%),
+        linear-gradient(145deg, #8f160b, #b92712);
+
+    border: 3px solid #d89b19;
+    border-radius: 30px;
+
+    color: white;
+
+    box-shadow:
+        0 20px 50px rgba(91, 12, 6, 0.25),
+        inset 0 0 40px rgba(255, 193, 7, 0.08);
+
+    overflow: hidden;
+}
+
+.maa-message-card::before,
+.maa-message-card::after {
+    content: "✦  ✧  ✦";
+    position: absolute;
+
+    color: #ffd66b;
+    font-size: 24px;
+    letter-spacing: 8px;
+
+    opacity: 0.7;
+}
+
+.maa-message-card::before {
+    top: 18px;
+    left: 25px;
+}
+
+.maa-message-card::after {
+    bottom: 18px;
+    right: 25px;
+}
+
+.message-diya {
+    font-size: 50px;
+    margin-bottom: 8px;
+
+    animation: messageDiyaGlow 1.5s infinite alternate;
+}
+
+.message-small {
+    margin: 0 0 10px;
+
+    color: #ffd66b;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.maa-message-card h2 {
+    margin: 0;
+
+    color: #fff4ce;
+    font-size: clamp(30px, 5vw, 45px);
+
+    text-shadow: 0 3px 15px rgba(0, 0, 0, 0.25);
+}
+
+.message-line {
+    width: 90px;
+    height: 3px;
+
+    margin: 20px auto;
+
+    border-radius: 10px;
+
+    background: #ffd66b;
+}
+
+.message-text {
+    max-width: 650px;
+    margin: auto;
+
+    color: #fff0cf;
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+.message-blessing {
+    display: inline-block;
+
+    margin-top: 25px;
+    padding: 10px 25px;
+
+    border: 1px solid #e5b83d;
+    border-radius: 30px;
+
+    background: rgba(255, 214, 107, 0.12);
+
+    color: #ffd66b;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.message-decoration {
+    position: absolute;
+    color: #ffd66b;
+    font-size: 25px;
+    opacity: 0.8;
+}
+
+.top-decoration {
+    top: 15px;
+    right: 25px;
+}
+
+.bottom-decoration {
+    bottom: 15px;
+    left: 25px;
+}
+
+@keyframes messageDiyaGlow {
+    from {
+        transform: scale(1);
+        filter: drop-shadow(0 0 5px #ffb300);
+    }
+
+    to {
+        transform: scale(1.08);
+        filter: drop-shadow(0 0 18px #ff9800);
+    }
+}
+
+@media (max-width: 520px) {
+
+    .maa-message-section {
+        padding: 65px 18px;
+    }
+
+    .maa-message-card {
+        padding: 45px 22px;
+    }
+
+    .message-text {
+        font-size: 15px;
+    }
+
+    .message-blessing {
+        font-size: 16px;
+    }
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.show-more-gallery {
+    display: block;
+    margin: 35px auto 0;
+    padding: 13px 28px;
+
+    border: 2px solid #d89b19;
+    border-radius: 30px;
+
+    background: linear-gradient(135deg, #a7190c, #df8510);
+    color: white;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow: 0 7px 20px rgba(91, 12, 6, 0.2);
+
+    transition: 0.3s ease;
+}
+
+.show-more-gallery:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(91, 12, 6, 0.3);
+}
+
+
+/* शुरुआत में extra photos hidden */
+.extra-gallery {
+    display: none;
+}
+
+
+/* Button दबाने के बाद */
+.gallery-grid.gallery-expanded .extra-gallery {
+    display: block;
+}
+
+.show-more-gallery {
+    display: block;
+    margin: 35px auto;
+    padding: 13px 30px;
+    border: 2px solid #d89b19;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #a7190c, #df8510);
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.show-more-gallery:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(91, 12, 6, 0.25);
+}
+
+
+/* शुरुआत में 6 के बाद वाली images छुपी रहेंगी */
+.gallery-item:nth-child(n + 7) {
+    display: none;
+}
+
+
+/* Button दबाने के बाद सभी images दिखेंगी */
+.gallery-grid.show-all .gallery-item {
+    display: block;
+}
+
+
+.gallery-item:nth-child(n + 7) {
+    display: none;
+}
+
+.gallery-grid.show-all .gallery-item {
+    display: block;
+}
+
+.show-more-gallery {
+    display: block;
+    margin: 35px auto 0;
+    padding: 13px 30px;
+    border: 2px solid #d89b19;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #a7190c, #df8510);
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.show-more-gallery:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(91, 12, 6, 0.25);
+}
+
+/* =========================
+   VIDEO GALLERY
+========================= */
+
+.video-section {
+    padding: 90px 6%;
+    background: linear-gradient(180deg, #fffaf0, #fff1d2);
+}
+
+.video-grid {
+    max-width: 1150px;
+    margin: 45px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.video-card {
+    background: white;
+    border: 2px solid #e3b54c;
+    border-radius: 20px;
+    overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(91, 36, 5, 0.12);
+
+    cursor: pointer;
+    transition: 0.35s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 35px rgba(91, 36, 5, 0.2);
+}
+
+.video-thumbnail {
+    position: relative;
+    height: 230px;
+    overflow: hidden;
+    background: #4b0b06;
+}
+
+.video-thumbnail video {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+}
+
+.video-play {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(167, 25, 12, 0.9);
+    border: 3px solid #ffd66b;
+
+    color: white;
+    font-size: 25px;
+
+    padding-left: 4px;
+
+    transition: 0.3s ease;
+}
+
+.video-card:hover .video-play {
+    transform: translate(-50%, -50%) scale(1.12);
+    background: #a7190c;
+}
+
+.video-info {
+    padding: 18px 20px;
+}
+
+.video-info h3 {
+    margin: 0 0 6px;
+
+    color: #99170c;
+    font-size: 20px;
+}
+
+.video-info p {
+    margin: 0;
+
+    color: #765832;
+    font-size: 14px;
+}
+
+
+/* =========================
+   VIDEO LIGHTBOX
+========================= */
+
+.video-lightbox {
+    position: fixed;
+    inset: 0;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    background: rgba(15, 3, 1, 0.94);
+    backdrop-filter: blur(8px);
+
+    z-index: 10001;
+}
+
+.video-lightbox.show {
+    display: flex;
+}
+
+.video-lightbox video {
+    max-width: 90%;
+    max-height: 85vh;
+
+    border: 3px solid #d89b19;
+    border-radius: 15px;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+.video-close {
+    position: absolute;
+
+    top: 20px;
+    right: 25px;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #a7190c;
+    color: white;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+.video-close:hover {
+    background: #d63a18;
+    transform: scale(1.08);
+}
+
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 520px) {
+
+    .video-section {
+        padding: 65px 18px;
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .video-thumbnail {
+        height: 250px;
+    }
+
+}
+
+/* =========================
+   PREMIUM DONATION SECTION
+========================= */
+
+.donation-section {
+    padding: 100px 6%;
+    background:
+        radial-gradient(circle at top right,
+        rgba(255, 202, 80, 0.15),
+        transparent 30%),
+        linear-gradient(180deg, #fffaf0, #fff0d0);
+}
+
+.donation-container {
+    max-width: 1100px;
+    margin: 50px auto 0;
+
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 30px;
+    align-items: stretch;
+}
+
+
+/* LEFT SIDE */
+
+.donation-content {
+    position: relative;
+
+    padding: 45px;
+
+    background: linear-gradient(145deg, #8f160b, #b92712);
+
+    border: 2px solid #d89b19;
+    border-radius: 28px;
+
+    color: white;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 18px 45px rgba(91, 12, 6, 0.22);
+}
+
+.donation-content::before {
+    content: "✦";
+    position: absolute;
+
+    top: 20px;
+    right: 25px;
+
+    color: #ffd66b;
+    font-size: 28px;
+}
+
+.donation-content::after {
+    content: "✦";
+    position: absolute;
+
+    bottom: 20px;
+    left: 25px;
+
+    color: #ffd66b;
+    font-size: 22px;
+}
+
+.donation-icon {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.donation-content h3 {
+    margin: 0 0 15px;
+
+    color: #ffd66b;
+    font-size: 29px;
+}
+
+.donation-content > p {
+    color: #fff0cf;
+    font-size: 15px;
+    line-height: 1.9;
+
+    max-width: 500px;
+}
+
+
+/* Points */
+
+.donation-points {
+    margin-top: 25px;
+}
+
+.donation-points > div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 13px;
+}
+
+.donation-points span {
+    width: 27px;
+    height: 27px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255, 214, 107, 0.15);
+    border: 1px solid #d89b19;
+
+    color: #ffd66b;
+    font-weight: bold;
+}
+
+.donation-points p {
+    margin: 0;
+
+    color: #fff4d7;
+    font-size: 14px;
+}
+
+.donation-thanks {
+    display: inline-block;
+
+    margin-top: 22px;
+    padding: 11px 20px;
+
+    border-radius: 25px;
+
+    background: rgba(255, 214, 107, 0.12);
+    border: 1px solid rgba(255, 214, 107, 0.5);
+
+    color: #ffd66b;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+
+/* RIGHT PAYMENT CARD */
+
+.donation-payment {
+    padding: 30px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 2px solid #e3b54c;
+    border-radius: 28px;
+
+    box-shadow:
+        0 15px 40px rgba(91, 36, 5, 0.13);
+
+    transition: 0.35s ease;
+}
+
+.donation-payment:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 22px 45px rgba(91, 36, 5, 0.18);
+}
+
+
+/* Payment Top */
+
+.payment-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 18px;
+
+    color: #99170c;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.payment-dot {
+    color: #2e9b55;
+    font-size: 12px;
+}
+
+
+/* QR */
+
+.qr-wrapper {
+    width: 220px;
+    height: 220px;
+    margin: 0 auto 18px;
+    padding: 10px;
+    background: white;
+    border: 2px solid #d89b19;
+    border-radius: 18px;
+    box-shadow:
+        0 8px 25px rgba(91, 36, 5, 0.15);
+
+    box-sizing: border-box;
+}
+
+.qr-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+
+/* Payment Text */
+
+.donation-payment h3 {
+    margin: 0 0 7px;
+
+    color: #99170c;
+    font-size: 21px;
+}
+
+.scan-text {
+    margin: 0 0 18px;
+
+    color: #765832;
+    font-size: 13px;
+}
+
+
+/* UPI Box */
+
+.upi-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px 15px;
+
+    background: #fff5d9;
+
+    border: 1px dashed #d89b19;
+    border-radius: 12px;
+
+    text-align: left;
+}
+
+.upi-box span {
+    color: #8b642f;
+    font-size: 12px;
+}
+
+.upi-box strong {
+    color: #99170c;
+    font-size: 14px;
+}
+
+
+/* Copy Button */
+
+.donate-copy-btn {
+    width: 100%;
+
+    margin-top: 13px;
+
+    padding: 12px 18px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: linear-gradient(135deg, #a7190c, #df8510);
+
+    color: white;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.donate-copy-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(157, 22, 11, 0.25);
+}
+
+.copy-message {
+    min-height: 18px;
+
+    margin: 8px 0 0;
+
+    color: #198754;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* Responsive */
+
+@media (max-width: 850px) {
+
+    .donation-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 520px) {
+
+    .donation-section {
+        padding: 70px 18px;
+    }
+
+    .donation-content {
+        padding: 32px 22px;
+    }
+
+    .donation-payment {
+        padding: 25px 18px;
+    }
+
+    .qr-wrapper {
+        width: 200px;
+        height: 200px;
+    }
+
+}
+
+/* =========================
+   MEMBERS HERO
+========================= */
+
+.members-hero {
+    min-height: 55vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 120px 20px 60px;
+
+    background:
+        linear-gradient(
+            rgba(70, 8, 2, 0.72),
+            rgba(70, 8, 2, 0.88)
+        ),
+        url("images/durga-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.members-hero-content {
+    color: white;
+    animation: membersHeroIn 1s ease;
+}
+
+.members-diya {
+    font-size: 60px;
+
+    animation: memberDiyaGlow 1.5s infinite alternate;
+}
+
+.members-hero-content p {
+    margin: 10px 0;
+
+    color: #ffd66b;
+
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.members-hero-content h1 {
+    margin: 0;
+
+    color: #fff5d6;
+
+    font-size: clamp(42px, 7vw, 70px);
+
+    text-shadow:
+        0 4px 20px rgba(0,0,0,.6);
+}
+
+.members-hero-content span {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    color: #ffe8aa;
+
+    font-size: 17px;
+    letter-spacing: 4px;
+}
+
+
+/* =========================
+   MEMBERS SECTION
+========================= */
+
+.members-section {
+    padding: 100px 6%;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(255, 205, 90, .15),
+            transparent 30%
+        ),
+        linear-gradient(
+            180deg,
+            #fffaf0,
+            #fff0d2
+        );
+}
+
+.members-grid {
+    max-width: 1150px;
+    margin: 50px auto 0;
+    display: grid;
+    grid-template-columns:
+        repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* =========================
+   MEMBER CARD
+========================= */
+
+.member-card {
+    position: relative;
+    padding: 35px 25px;
+    text-align: center;
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #fff8e8
+        );
+
+    border: 2px solid #e3b54c;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow:
+        0 10px 28px
+        rgba(91, 36, 5, .12);
+
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
+}
+
+.member-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 4px;
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #ffd66b,
+            #a7190c,
+            #ffd66b,
+            transparent
+        );
+
+    transition: .6s ease;
+}
+
+.member-card:hover::before {
+    left: 100%;
+}
+
+.member-card:hover {
+
+    transform:
+        translateY(-10px)
+        scale(1.02);
+
+    box-shadow:
+        0 20px 40px
+        rgba(91, 36, 5, .20);
+}
+
+
+/* MEMBER NUMBER */
+
+.member-number {
+    position: absolute;
+    top: 15px;
+    right: 18px;
+    color: #d5a42e;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+
+/* ICON */
+
+.member-icon {
+    width: 115px;
+    height: 115px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background:
+        linear-gradient(
+            145deg,
+            #fff4ce,
+            #ffe5a1
+        );
+
+    border: 2px solid #d89b19;
+    font-size: 34px;
+    box-shadow:
+        0 0 0 7px
+        rgba(216,155,25,.10);
+
+    transition: .4s ease;
+}
+
+.member-card:hover .member-icon {
+
+    transform:
+        rotate(4deg)
+        scale(1.12);
+
+    box-shadow:
+        0 0 25px
+        rgba(216,155,25,.40);
+}
+
+
+/* NAME */
+
+.member-card h3 {
+    margin: 0 0 8px;
+    color: #99170c;
+    font-size: 22px;
+    font-weight: 800;
+    position: relative;
+    display: inline-block;
+}
+
+
+/* NAME SHIMMER */
+
+.member-card h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background:
+        linear-gradient(
+            90deg,
+            #a7190c,
+            #e3a21b
+        );
+
+    transition: .4s ease;
+}
+
+.member-card:hover h3::after {
+    width: 100%;
+}
+
+
+.member-card p {
+    margin: 0;
+    color: #806039;
+    font-size: 14px;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes membersHeroIn {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(35px)
+            scale(.96);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+@keyframes memberDiyaGlow {
+
+    from {
+        transform: scale(1);
+
+        filter:
+            drop-shadow(
+                0 0 5px #ffb300
+            );
+    }
+
+    to {
+        transform: scale(1.08);
+
+        filter:
+            drop-shadow(
+                0 0 20px #ff9800
+            );
+    }
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 850px) {
+
+    .members-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    .members-section {
+        padding: 70px 18px;
+    }
+
+    .members-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .members-hero {
+        min-height: 48vh;
+    }
+
+}
+/* ===== MEMBERS MORE BUTTON ===== */
+
+.members-grid .member-card:nth-child(n + 7) {
+    display: none;
+}
+
+.members-grid.show-all .member-card:nth-child(n + 7) {
+    display: block;
+}
+
+.show-more-members {
+    display: block;
+    margin: 40px auto 0;
+    padding: 13px 30px;
+    border: 2px solid #d89b19;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #a7190c, #d87900);
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(91, 36, 5, .18);
+    transition: .3s ease;
+}
+
+.show-more-members:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(91, 36, 5, .25);
+}
+
+/* =========================
+   FOOTER MOBILE FIX
+========================= */
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.footer {
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+    min-height: 150px;
+    box-sizing: border-box;
+    clear: both;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 10;
+}
+
+@media (max-width: 520px) {
+    .footer {
+        display: block !important;
+        position: relative !important;
+        width: 100% !important;
+        min-height: 170px;
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    .footer-content {
+        display: block;
+        padding: 35px 15px 25px;
+    }
+
+    .footer-bottom {
+        display: block;
+    }
+}
+
+/* ===== FINAL SCROLL FIX ===== */
+/* html {
+    height: auto;
+    min-height: 100%;
+    overflow-y: auto;
+}
+
+body {
+    height: auto;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+} */
+
+/* =================================
+   MAA KA AASHIRWAD
+================================= */
+
+.blessing-section {
+    padding: 80px 20px;
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255, 214, 107, 0.18),
+            transparent 45%
+        ),
+        linear-gradient(180deg, #fff4d8, #ffe8b0);
+
+    text-align: center;
+}
+
+.blessing-card {
+    max-width: 700px;
+    margin: auto;
+    padding: 45px 25px;
+    background-image: url(https://png.pngtree.com/png-vector/20240921/ourmid/pngtree-happy-navratri-durga-eyes-and-trishul-with-dandiya-sticks-vector-png-image_13885624.png);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 2px solid #d89b19;
+    border-radius: 30px;
+    box-shadow:
+        0 15px 40px rgba(91, 36, 5, 0.15);
+}
+
+.blessing-small {
+    margin: 0 0 10px;
+
+    color: #a7190c;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.blessing-card h2 {
+    margin: 0;
+
+    color: #8f160b;
+    font-size: 30px;
+}
+
+.blessing-text {
+    margin: 12px 0 25px;
+font-weight: 900;
+    color: #000000;
+    font-size: 25px;
+}
+
+/* Bell */
+
+.bell-button {
+    width: 90px;
+    height: 90px;
+
+    border: 3px solid #d89b19;
+    border-radius: 50%;
+
+    background: linear-gradient(
+        145deg,
+        #ffd66b,
+        #e59b19
+    );
+
+    font-size: 45px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(157, 22, 11, 0.25);
+
+    transition: 0.25s ease;
+}
+
+.bell-button:hover {
+    transform: scale(1.08);
+}
+
+.bell-button.ringing {
+    animation: bellRing 0.7s ease;
+}
+
+@keyframes bellRing {
+
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    15% {
+        transform: rotate(15deg) scale(1.08);
+    }
+
+    30% {
+        transform: rotate(-15deg) scale(1.08);
+    }
+
+    45% {
+        transform: rotate(12deg) scale(1.08);
+    }
+
+    60% {
+        transform: rotate(-12deg) scale(1.08);
+    }
+
+    75% {
+        transform: rotate(6deg) scale(1.05);
+    }
+
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+.blessing-message {
+    min-height: 25px;
+
+    margin: 20px 0 0;
+
+    color: #99170c;
+    font-size: 16px;
+    font-weight: 700;
+
+    opacity: 0;
+    transform: translateY(10px);
+
+    transition: 0.4s ease;
+}
+
+.blessing-message.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Mobile */
+
+@media (max-width: 520px) {
+
+    .blessing-section {
+        padding: 60px 18px;
+    }
+
+    .blessing-card {
+        padding: 35px 18px;
+    }
+
+    .blessing-card h2 {
+        font-size: 23px;
+        line-height: 1.4;
+    }
+
+    .blessing-text {
+        font-size: 13px;
+    }
+
+    .bell-button {
+        width: 80px;
+        height: 80px;
+        font-size: 40px;
+    }
+}
+/* =================================
+   SOCIAL MEDIA
+================================= */
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.footer-social a {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+    text-decoration: none;
+    font-size: 21px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.footer-social a:hover {
+    transform: translateY(-5px) scale(1.08);
+    background: #fd6d6d;
+    color: #000000;
+    box-shadow: 0 8px 20px rgba(216, 155, 25, 0.35);
+}
