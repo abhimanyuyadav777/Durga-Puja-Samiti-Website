@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samiti No.2</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+</head>
+
+<body>
+    <!-- Welcome Popup -->
+    <div id="welcomePopup" class="welcome-popup">
+        <div class="popup-box">
+
+            <div class="diya"><img src="images/logo.png" alt=""></div>
+
+            <h1>जय माता दी</h1>
+
+            <h2>नवरात्रि की हार्दिक शुभकामनाएं</h2>
+
+            <p class="today-text"></p>
+
+            <div class="namaste"><img id="mataImage"
+                    src="https://png.pngtree.com/png-vector/20250825/ourmid/pngtree-a-man-in-traditional-indian-attire-prayer-hands-namaste-png-image_17176671.webp"
+                    width="50px" alt="माँ शैलपुत्री">
+            </div>
+
+            <h3 id="mataName">सौजन्य: समिति नंबर 2 🚩</h3>
+
+            <p id="mataMessage">
+                आप सभी श्रद्धालुओं को नवरात्रि की अनंत शुभकामनाएं!<br>
+                सौजन्य: समिति नंबर 2 🚩<br>
+                माता रानी की कृपा आप पर बनी रहे। जय माता दी!
+            </p>
+
+            <button onclick="closeWelcomePopup()">
+                माता के दर्शन करें 🙏
+            </button>
+
+        </div>
+
+    </div>
+    <header class="navbar">
+
+        <div class="logo">
+            <img src="images/logo.png" width="85px" height="80px" alt="Logo">
+            <span>श्री दुर्गा पूजा समिति🚩</span>
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <button class="menu-toggle" id="menuToggle" onclick="toggleMobileMenu()" aria-label="Menu">
+            ☰
+        </button>
+
+        <nav id="mainNav">
+            <a href="index.html">Home</a>
+            <a href="navdurga.html">Navdurga</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contactus.html">Contact Us</a>
+            <a href="samitistaff.html">Samiti Member</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ================================
+     HERO SECTION
+================================ -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <p class="hero-small">
+                🙏 जय माता दी 🙏
+            </p>
+
+            <h1>
+                श्री दुर्गा पूजा समिति
+            </h1>
+
+            <h2>
+                नवरात्रि महोत्सव 2026
+            </h2>
+
+            <p class="hero-description">
+                माँ दुर्गा के पावन आगमन पर
+                आप सभी भक्तजनों का हार्दिक स्वागत एवं अभिनंदन।
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="gallery.html" class="hero-btn">
+                    📸 हमारी Gallery
+                </a>
+
+                <a href="contactus.html" class="hero-btn outline-btn">
+                    📞 Contact Us
+                </a>
+
+                <a href="#donation" class="hero-btn">
+                    🙏 सेवा का अवसर 🙏
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About Samiti Section -->
+    <section class="about-section">
+
+        <div class="section-heading">
+            <p>🌺 हमारी समिति 🌺</p>
+            <h2>हमारे बारे में</h2>
+            <span>
+                भक्ति, सेवा और संस्कृति के साथ माँ दुर्गा की आराधना
+            </span>
+        </div>
+
+        <div class="about-container">
+
+            <!-- About Text -->
+            <div class="about-content">
+
+                <h3 class="popup-box">
+                    <div class="diya"><img src="images/logo.png" alt=""> श्री दुर्गा पूजा समिति
+                    </div>
+                </h3>
+
+                <p>
+                    श्री दुर्गा पूजा समिति द्वारा प्रत्येक वर्ष
+                    माँ दुर्गा के पावन नवरात्रि महोत्सव का आयोजन
+                    श्रद्धा और भक्ति के साथ किया जाता है।
+                </p>
+
+                <p>
+                    हमारा उद्देश्य केवल पूजा का आयोजन करना ही नहीं,
+                    बल्कि समाज में आपसी प्रेम, एकता और हमारी
+                    सांस्कृतिक परंपराओं को आगे बढ़ाना भी है।
+                </p>
+
+                <div class="about-highlight">
+                    🙏 <strong>जय माता दी</strong> 🙏
+                    <span>माँ का आशीर्वाद सभी भक्तों पर बना रहे</span>
+                </div>
+
+            </div>
+
+
+            <!-- Features -->
+            <div class="about-features">
+
+                <div class="about-feature">
+                    <div class="feature-icon">🙏</div>
+                    <div>
+                        <h4>भक्ति</h4>
+                        <p>माँ दुर्गा की श्रद्धापूर्वक आराधना</p>
+                    </div>
+                </div>
+
+                <div class="about-feature">
+                    <div class="feature-icon">🤝</div>
+                    <div>
+                        <h4>एकता</h4>
+                        <p>समाज में प्रेम और भाईचारे की भावना</p>
+                    </div>
+                </div>
+
+                <div class="about-feature">
+                    <div class="feature-icon">🌺</div>
+                    <div>
+                        <h4>संस्कृति</h4>
+                        <p>हमारी परंपराओं और संस्कृति का संरक्षण</p>
+                    </div>
+                </div>
+
+                <div class="about-feature">
+                    <div class="feature-icon">❤️</div>
+                    <div>
+                        <h4>सेवा</h4>
+                        <p>समाज और भक्तों की सेवा का संकल्प</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Festival Events Section -->
+    <section class="events-section">
+
+        <div class="section-heading">
+            <p>📅 नवरात्रि महोत्सव 📅</p>
+            <h2>मुख्य कार्यक्रम</h2>
+            <span>
+                नवरात्रि के पावन अवसर पर आयोजित होने वाले प्रमुख कार्यक्रम
+            </span>
+        </div>
+
+        <div class="events-container">
+
+            <div class="event-card">
+                <div class="event-number">01</div>
+                <div class="event-icon"><img
+                        src="https://png.pngtree.com/png-vector/20260831/ourmid/pngtree-traditional-hindu-durga-puja-thali-with-brass-kalash-and-diya-lotus-png-image_20068914.webp"
+                        width="70px" height="70px" style="border-radius: 10px;" alt=""></div>
+                <h3>कलश स्थापना</h3>
+                <p>
+                    नवरात्रि के शुभारंभ पर माँ दुर्गा की
+                    विधिवत पूजा एवं कलश स्थापना।
+                </p>
+            </div>
+
+            <div class="event-card">
+                <div class="event-number">02</div>
+                <div class="event-icon"><img
+                        src="https://png.pngtree.com/png-vector/20250914/ourmid/pngtree-traditional-durga-puja-items-arranged-together-symbolizing-devotion-culture-and-festive-png-image_17432827.webp"
+                        width="60px" height="60px" style="border-radius: 5px;" alt=""></div>
+                <h3>दुर्गा पूजा</h3>
+                <p>
+                    प्रतिदिन माँ दुर्गा के विभिन्न स्वरूपों की
+                    पूजा एवं आरती।
+                </p>
+            </div>
+
+            <div class="event-card">
+                <div class="event-number">03</div>
+                <div class="event-icon"><img
+                        src="https://png.pngtree.com/png-vector/20250227/ourmid/pngtree-traditional-indian-aarti-plate-with-diyas-and-flowers-png-image_15606849.png"
+                        width="60px" height="60px" style="border-radius: 10px;" alt=""></div>
+                <h3>विशेष आरती</h3>
+                <p>
+                    संध्या समय भक्तजनों के साथ
+                    विशेष आरती एवं भजन।
+                </p>
+            </div>
+
+            <div class="event-card">
+                <div class="event-number">04</div>
+                <div class="event-icon">✨</div>
+                <h3>महाअष्टमी</h3>
+                <p>
+                    महाअष्टमी के पावन अवसर पर
+                    विशेष पूजा एवं धार्मिक कार्यक्रम।
+                </p>
+            </div>
+
+            <div class="event-card">
+                <div class="event-number">05</div>
+                <div class="event-icon"><img
+                        src="https://png.pngtree.com/png-vector/20260618/ourmid/pngtree-durga-puja-festival-illustration-with-goddess-and-attendants-png-image_19585120.webp"
+                        width="60px" height="60px" style="border-radius: 10px;" alt=""></div>
+                <h3>महानवमी</h3>
+                <p>
+                    महानवमी के दिन विशेष आरती,
+                    पूजा एवं प्रसाद वितरण।
+                </p>
+            </div>
+
+            <div class="event-card">
+                <div class="event-number">06</div>
+                <div class="event-icon"><img
+                        src="https://png.pngtree.com/png-vector/20250919/ourmid/pngtree-loard-rama-shooting-ravana-dussehra-illustration-vector-png-image_17511508.webp"
+                        width="60px" height="60px" style="border-radius: 5px;" alt=""></div>
+                <h3>विजयादशमी</h3>
+                <p>
+                    नवरात्रि महोत्सव के समापन पर
+                    विजयादशमी का पावन उत्सव।
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- Committee Highlights -->
+    <section class="highlights-section">
+
+        <div class="section-heading">
+            <div class="diya"><img
+                    src="https://png.pngtree.com/png-vector/20260821/ourmid/pngtree-high-quality-durga-puja-single-lotus-flower-transparent-png-image_20020988.webp"
+                    width="150px" alt=""></div>
+            <p>✨ हमारी विशेषताएँ ✨</p>
+            <h2>समिति की Highlights</h2>
+            <span>भक्ति, परंपरा और सेवा की कुछ खास झलकियाँ</span>
+        </div>
+
+        <div class="highlights-container">
+
+            <div class="highlight-card">
+                <div class="highlight-icon"><img
+                        src="https://png.pngtree.com/png-vector/20221012/ourmid/pngtree-young-couple-character-dancing-with-dandiya-sticks-music-pose-dance-vector-png-image_28434508.png"
+                        width="50px" height="50px" style="border-radius: 5px;" alt=""></div>
+                <h3>नवरात्रि महोत्सव</h3>
+                <p>श्रद्धा और भक्ति के साथ माँ दुर्गा की आराधना</p>
+            </div>
+
+            <div class="highlight-card">
+                <div class="highlight-icon"><img
+                        src="https://png.pngtree.com/png-vector/20250227/ourmid/pngtree-happy-navaratri-dashahra-maa-durga-navratri-mata-rani-beautiful-face-high-png-image_15610535.png"
+                        width="80px" height="80px" style="border-radius: 5px;" alt=""></div>
+                <h3>नवदुर्गा दर्शन</h3>
+                <p>माँ के नौ दिव्य स्वरूपों का पावन दर्शन</p>
+            </div>
+
+            <div class="highlight-card">
+                <div class="highlight-icon"><img
+                        src="https://png.pngtree.com/png-vector/20251023/ourmid/pngtree-an-ornate-multi-tiered-brass-lamp-with-numerous-lit-wicks-symbolizing-png-image_17805061.webp"
+                        width="80px" height="80px" style="border-radius: 5px;" alt=""></div>
+                <h3>विशेष पूजा एवं आरती</h3>
+                <p>प्रतिदिन पूजा, आरती एवं धार्मिक कार्यक्रम</p>
+            </div>
+
+            <div class="highlight-card">
+                <div class="highlight-icon">🤝</div>
+                <h3>सेवा एवं एकता</h3>
+                <p>समाज में प्रेम, सहयोग और भाईचारे का संदेश</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Maa Message Section -->
+    <section class="maa-message-section">
+
+        <div class="maa-message-card">
+
+            <div class="message-decoration top-decoration">✦</div>
+
+            <div class="message-diya"><img src="images/badi Durga maa.jpg" width="140px" height="200px"
+                    style="border-radius: 5px;" alt=""></div>
+
+            <p class="message-small">🌺 माँ का पावन संदेश 🌺</p>
+
+            <h2>श्रद्धा रखो, विश्वास रखो</h2>
+
+            <div class="message-line"></div>
+
+            <p class="message-text">
+                माँ दुर्गा की कृपा से आपके जीवन में सुख, शांति,
+                समृद्धि और खुशियाँ बनी रहें।
+                माँ का आशीर्वाद सदैव आपके और आपके परिवार के साथ रहे।
+            </p>
+
+            <div class="message-blessing">
+                🙏 जय माता दी 🙏
+            </div>
+
+            <div class="message-decoration bottom-decoration">✦</div>
+
+        </div>
+
+    </section>
+
+    <!-- Donation Section -->
+    <section id="donation" class="donation-section">
+
+        <div class="section-heading">
+            <img src="https://png.pngtree.com/png-vector/20220528/ourmid/pngtree-donate-now-donate-now-help-vector-png-image_13692560.png"
+                width="150px" alt="">
+            <p>🙏 सेवा का अवसर 🙏</p>
+            <h2>माँ के दरबार में सहयोग</h2>
+            <span>आपका छोटा सा सहयोग माँ के पावन आयोजन को और भव्य बनाने में सहायक है</span>
+        </div>
+
+        <div class="donation-container">
+
+            <!-- Left Content -->
+            <div class="donation-content">
+
+                <div class="diya"><img
+                        src="https://png.pngtree.com/png-vector/20250301/ourmid/pngtree-goddess-maa-durga-sherawali-with-trishul-sword-beautiful-new-mata-rani-png-image_15610538.png"
+                        width="150px" alt=""></div>
+
+                <h3>श्री दुर्गा पूजा समिति</h3>
+
+                <p>
+                    नवरात्रि महोत्सव के पूजा-पाठ, प्रसाद, सजावट
+                    एवं धार्मिक कार्यक्रमों के आयोजन में आप भी
+                    अपनी श्रद्धानुसार सहयोग कर सकते हैं।
+                </p>
+
+                <div class="donation-points">
+                    <div>
+                        <span>✓</span>
+                        <p>पूजा एवं धार्मिक आयोजन</p>
+                    </div>
+
+                    <div>
+                        <span>✓</span>
+                        <p>प्रसाद एवं भक्तों की सेवा</p>
+                    </div>
+
+                    <div>
+                        <span>✓</span>
+                        <p>पंडाल एवं सजावट</p>
+                    </div>
+                </div>
+
+                <div class="donation-thanks">
+                    🙏 आपका सहयोग, माँ का आशीर्वाद 🙏
+                </div>
+
+            </div>
+
+
+            <!-- QR Payment -->
+            <div class="donation-payment">
+
+                <div class="payment-top">
+                    <span>सुरक्षित UPI सहयोग</span>
+                    <span class="payment-dot">●</span>
+                </div>
+
+                <div class="qr-wrapper">
+
+                    <!-- अपना QR image यहाँ लगाना -->
+                    <img src="images/Qr-Code.jpeg" alt="UPI Donation QR Code">
+
+                </div>
+
+                <h3>Scan करके सहयोग करें</h3>
+
+                <p class="scan-text">
+                    अपने UPI App से QR Code Scan करें
+                </p>
+
+                <div class="upi-box">
+                    <span>UPI ID</span>
+                    <strong>ay6998228-3@okaxis</strong>
+                </div>
+
+                <button class="donate-copy-btn" onclick="copyUPI()">
+                    📋 UPI ID Copy करें
+                </button>
+
+                <p id="copyMessage" class="copy-message"></p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Maa Ka Aashirwad Section -->
+    <section class="blessing-section">
+
+        <div class="blessing-card">
+
+            <p class="blessing-small">🌺 माँ का आशीर्वाद 🌺</p>
+
+            <h2>माँ दुर्गा का आशीर्वाद प्राप्त करें</h2>
+
+
+            <button class="bell-button" onclick="ringBell()">
+                🔔
+            </button>
+            <p class="blessing-text">
+                घंटी बजाकर माँ का आशीर्वाद प्राप्त करें 🙏
+            </p>
+
+            <p id="blessingMessage" class="blessing-message">
+                🔔 घंटी बजाएँ
+            </p>
+
+        </div>
+
+    </section>
+
+    <div class="footer-social">
+        <a href="https://www.instagram.com/royal__abhimanyu_/" target="_blank" aria-label="Instagram">
+            <img src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-instagram-icon-png-image_6315974.png"
+                width="40px" alt="">
+        </a>
+
+        <a href="https://www.facebook.com/profile.php?id=61576236485258" target="_blank" aria-label="Facebook">
+            <img src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-facebook-social-media-icon-png-image_6315968.png"
+                width="40px" alt="">
+        </a>
+
+        <a href="https://www.youtube.com/@Abhimanyu7781" target="_blank" aria-label="YouTube">
+            <img src="https://png.pngtree.com/png-clipart/20221018/ourmid/pngtree-youtube-social-media-3d-stereo-png-image_6308427.png"
+                width="40px" alt="">
+        </a>
+
+        <a href="https://wa.me/916393170674" target="_blank" aria-label="WhatsApp">
+            <img src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-whatsapp-icon-new-png-image_6315990.png"
+                width="40px" alt="">
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div class="footer-logo">
+                🔱श्री दुर्गा पूजा समिति🔱
+            </div>
+
+            <p>
+                🙏 जय माता दी • शुभ नवरात्रि 🙏
+            </p>
+
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="navdurga.html">Navdurga</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contactus.html">Contact</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 श्री दुर्गा पूजा समिति • सभी अधिकार सुरक्षित
+            Made By Abhimanyu Yadav ❤🙏
+        </div>
+
+    </footer>
+
+
+    <!-- =================================
+     MATA DETAILS POPUP
+================================= -->
+
+    <div id="mataModal" class="mata-modal">
+        <div class="mata-modal-box">
+            <button class="modal-close" onclick="closeMata()">
+                ×
+            </button>
+            <img id="modalMataImage" src="" alt="Mata Ji">
+            <div class="modal-day" id="modalDay"></div>
+            <h2 id="modalMataName"></h2>
+            <p id="modalDescription"></p>
+            <div class="modal-blessing">
+                🙏 माँ का आशीर्वाद आप सभी पर बना रहे 🙏
+            </div>
+
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
